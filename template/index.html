@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- PC -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit"><!-- 让部分国产浏览器默认采用高速模式(国内浏览器厂商一般都支持兼容模式（即 IE 内核）和高速模式（即 webkit 内核），不幸的是，所有国产浏览器都是默认使用兼容模式。目前只有360浏览器支持此 <meta> 标签。) -->
+    <meta name="description" content="">
+
+    <!-- mobile -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="/dist/index.css?v=<%= htmlWebpackPlugin.options.hash %>" rel="stylesheet"></head>
+  </head>
+  <body>
+    <div id="app">
+    </div>
+    <script src="lib/immutable.min.js"></script>
+    <script src="lib/moment.min.js"></script>
+    <script src="lib/react.production.min.js"></script>
+    <script src="lib/react-dom.production.min.js"></script>
+    <script src="dist/vendor.js?v=<%= htmlWebpackPlugin.options.hash %>"></script>
+    <script src="dist/index.js?v=<%= htmlWebpackPlugin.options.hash %>"></script>
+  </body>
+</html>
